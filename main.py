@@ -39,12 +39,18 @@ def trigger_warnings(): # Function Complete
         exit()
 
 
+# TODO: Edit the rest of this segment
 # Giving the player a synopsis of the game, the tags for the game, and a full list of trigger warnings
 def game_overview():
-    print("""
+    print("""A threnody is a song lamenting the dead, notably also the title of a poem by Ralph Waldo Emerson.
+\033[3mThrenody\033[0m follows the intertwining story of 
+    
+Tags: #foundfamily #drama #horror #tragedy #hurt/comfort #chooseyourownadventure #english #strategy #textbased #firstperson #thirdperson #multipleendings #darkfantasy
     """)
+    new_choice()
 
 
+# TODO: Add actual palying guide
 # Giving the player a full list of how to play, and valid inputs
 def play_guides():
     print("Welcome to the \033[3mThrenody\033[0m playing guide.")
@@ -52,42 +58,60 @@ def play_guides():
 
 # Giving the player info on how to contact me [at the time of writing this, the developer is arislam-cs28 on GitHub and blueheart.elf on everything else]
 def contact():
-    print("email")
+    print("""Email: arislam.cs28@gmail.com
+GitHub: arislam-cs28
+Steam: blueheart.elf
+Itch.io: blueheart_elf""")
+    new_choice()
+
+def new_choice():
+    while True:
+        print("""Options:
+    - To see the full game synopsis tags, type: 1
+    - To get instructions on how to play, type: 2
+    - To begin playing, type: 3
+    - To contact the original developer with bug notices, questions, or just thoughts on the game, type: 4""")
+    
+        try:
+            action = int(input("What would you like to do? "))
+        except:
+            print("Invalid input. Please try again.")
+            continue
+
+    
+        if action == 1: # pull up game overview if chosen
+            game_overview()
+            break
+        
+        elif action == 2: # show how to play the game
+            play_guides()
+            break
+        
+        elif action == 3: # redirect to main storyline
+            vts.player_name = input("What is your name? ").strip()
+            print(f"A pleasure, {vts.player_name}.")
+            print("Your experience begins \033[3mnow.\033[0m")
+            print("##############################################")
+            print("")
+            print()
+
+            st.beginning()
+            break
+
+        elif action == 4:
+            contact()
+            break
+
+        else: 
+            print("Invalid input. Please try again.")
 
 
 # Giving the player a full overview of the things they may do on the main menu
 def main_menu(): # Function Complete
     print()
     print("""####################################
-Welcome to the main menu of \033[3mThrenody\033[0m, a text-based game where you make choices to navigate the waters of grief, violence, and an exploration of the human psyche.
-
-Options:
-    - To see the full game synopsis tags, type: 1
-    - To get instructions on how to play, type: 2
-    - To begin playing, type: 3
-    - To contact the original developer with bug notices, questions, or just thoughts on the game, type: 4""")
-    action = int(input("What would you like to do? "))
-
-    if action == 1:
-        game_overview()
-
-    elif action == 2:
-        play_guides()
-
-    elif action == 3:
-        vts.player_name = input("What is your name? ")
-        print(f"Nice to meet you, {vts.player_name}.")
-        print("Your experience begins \033[3mnow.\033[0m")
-
-        st.beginning()
-
-
-    elif action == 4:
-        contact()
-
-    else:
-        print("Invalid input. Please try again.")
-        main_menu()
+Welcome to the main menu of \033[3mThrenody\033[0m, a Python-run text-based game where you make choices to navigate the waters of grief, violence, and an exploration of the human psyche.""")
+    new_choice()
 
 
 ###############################################################################################################################
