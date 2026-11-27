@@ -22,8 +22,14 @@ def one_choice1(): # the WHAT ARE YOU DOING HERE? choice
     char_print("\"Why bring that up now? She's gone, Muriel. Telling me this changes nothing.")
     char_print("Muriel just stared, her fan leaving my face as she grimaced. \"Forgive me. Her death is still fresh.\"")
     char_print("I paced side to side, my fingers scratching at the cigarette body in my pocket.")
-    char_print("\"The children still ask where you went. Mirai told them you were dead in a ditch.\"")
-    char_print("I frowned deeper.")
+    char_print("\"The children still ask where you went. Mirai told them you were dead in a ditch. It took a long time to get them to stop cying, but I managed.\"")
+    char_print("I frowned deeper, now positive that my fingers had begun bleeding from the incessant scratching.")
+    char_print("\"I send my regards to the twins.\" Muriel casually nodded at my statement, her demeanor giving away nothing to match her red-rimmed eyes. We stood there in silence, and just" \
+    " as I was about to leave, Mirai caught my wrist and dragged me back.")
+    char_print("\"She wanted me to tell you something. Didn't have the chance earlier.\" Muriel unfurled my fingers and shoved an envelope in. \"I'm not sure I'll be " \
+    "able to read it to you without, well, you know.\"")
+    char_print("The envelope still smelled like Mirai: like the gel she put in her hair before a nightclub show; like the perfume she forced me to pick out because she was, as always, far too indecisive; like the blood she spattered right before she coughed.")
+    char_print("\"")
 
 def one_choice2(): # the NO NEED TO REMIND ME choice
     vts.emotion["harsh"] += 2
@@ -44,7 +50,7 @@ The darling who shall not return.\033[0m""")
     char_print("The mob of mourners continued to grow despite the ever increasing torrent. At one point, I was sure Ulschadt's Queen had come by but the endless" \
     " drivel of the night and the frequenting of reporters and parasocial fans and family and friends and everyone in the Capital had " \
     "thrown my head into a faint buzz.")
-    char_print("The most I could do was to tell the funeral band to stop playing classical piano and worse, Lyubon; Mirai would have my head in heaven for that.")
+    char_print("The most I could do was to tell the funeral band to stop playing classical piano and worse, Lyubon; Mirai would have my head for that.")
     char_print("But Mirai Leytmer was dead, and buried in a half-carved coffin, and would never reawaken because there is no mercy for the good.")
     char_print("Ulschadt would not get her best spy back.")
     char_print("")
