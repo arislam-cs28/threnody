@@ -72,4 +72,4 @@ The darling who shall not return.\033[0m""")
 
 
 
-beginning()
+one_choice1()
